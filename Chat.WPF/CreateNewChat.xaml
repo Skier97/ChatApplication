@@ -1,0 +1,23 @@
+﻿<Page x:Class="Chat.WPF.CreateNewChat"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chat.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="CreateNewChat">
+
+    <Grid>
+        <Label x:Name="WhoIs" Content="Открыть диалог с..." HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="204" FontWeight="Bold" Height="39" FontSize="20"/>
+        <ListBox x:Name="listBoxUsers" HorizontalAlignment="Center" Height="438" Margin="0,72,0,0" VerticalAlignment="Top" Width="380" ItemTemplate="{DynamicResource UserTemplate}" Grid.Column="1" Grid.Row="1" MouseDoubleClick="listBoxUsers_MouseDoubleClick">
+            <ListBox.Resources>
+                <DataTemplate x:Key="UserTemplate">
+                    <Grid Width="360" Height="60">
+                        <Label Content="{Binding NameUser}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="360" Height="40" Margin="0,0,0,0" FontWeight="Normal" FontSize="16"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.Resources>
+        </ListBox>
+    </Grid>
+</Page>

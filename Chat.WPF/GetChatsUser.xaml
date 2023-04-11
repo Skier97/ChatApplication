@@ -1,0 +1,37 @@
+﻿<Page x:Class="Chat.WPF.GetChatsUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chat.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="GetChatsUser">
+
+    <Grid Margin="0,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="539*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="CreateMessageButton" Content="Написать сообщение" HorizontalAlignment="Left" Margin="209,22,0,0" VerticalAlignment="Top" Height="33" Width="168" Grid.Column="1" Grid.Row="1" Click="CreateMessageButton_Click"/>
+        <Button x:Name="ExitButton" Content="Выйти" HorizontalAlignment="Left" Margin="10,463,0,0" VerticalAlignment="Top" Height="33" Width="104" Grid.Column="1" Grid.Row="1" Click="ExitButton_Click"/>
+        <Label x:Name="MyNameLabel" Content="" HorizontalAlignment="Left" Margin="24,9,0,0" VerticalAlignment="Top" Width="136" FontWeight="Bold" Grid.Column="1" Grid.Row="1" Height="26"/>
+        <ListBox x:Name="listBoxChats" HorizontalAlignment="Center" Height="370" Margin="0,72,0,0" VerticalAlignment="Top" Width="380" ItemTemplate="{DynamicResource ChatTemplate}" Grid.Column="1" Grid.Row="1" MouseDoubleClick="listBoxChats_MouseDoubleClick">
+            <ListBox.Resources>
+                <DataTemplate x:Key="ChatTemplate">
+                    <Grid Width="360" Height="50" Background="{Binding IsRead}">
+                        <Label Content="{Binding ChatName}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" Margin="0,0,0,0"/>
+                        <Label Content="{Binding TextLastMessage}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" Margin="0,25,0,0" FontStyle="Italic" FontSize="10"/>
+                        <Label Content="{Binding CreateLastMess}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" Margin="250,10,0,0" FontSize="12"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.Resources>
+        </ListBox>
+
+
+    </Grid>
+</Page>

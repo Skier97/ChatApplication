@@ -1,0 +1,46 @@
+﻿<Page x:Class="Chat.WPF.ViewDialog"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chat.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="ViewDialog">
+
+    <Grid Background="#F0F8FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition MaxHeight="450" Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0">
+            <Grid>
+                <Label x:Name="labelChatName" Content="" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="176" FontWeight="Bold"/>
+                <Button x:Name="buttonBack" Content="🠔" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Height="30" Width="49" FontSize="20" FontWeight="Bold" Click="buttonBack_Click"/>
+            </Grid>
+        </Border>
+        <Border Grid.Row="1">
+            <ListBox  Background="Azure" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" Name="listBoxDialog" Focusable="False" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem Background="{Binding Background}">
+                            <Border Background="#FFE4C4" CornerRadius="8" MinHeight="30" MinWidth="70" MaxWidth="300" HorizontalAlignment="{Binding Alignment}" Padding="0,0,0,1">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding TextMessage}" TextWrapping="Wrap" Margin="2,2,2,2" FontFamily="Corbel"/>
+                                    <TextBlock Text="{Binding TimeSend}" HorizontalAlignment="Right" FontSize="8" FontFamily="Corbel" Margin="0,0,2,2" />
+                                </StackPanel>
+                            </Border>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+        <Border Grid.Row="2">
+            <Grid>
+                <TextBox x:Name="textBoxMess" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="335" Height="50" MaxWidth="335"/>
+                <Button x:Name="buttonSend" Content="➤" HorizontalAlignment="Left" Margin="335,0,0,0" VerticalAlignment="Center" Height="50" Width="65" FontSize="22" FontWeight="Bold" Click="buttonSend_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

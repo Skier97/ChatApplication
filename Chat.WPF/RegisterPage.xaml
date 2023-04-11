@@ -1,0 +1,25 @@
+﻿<Page x:Class="Chat.WPF.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chat.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="RegisterPage">
+
+    <Grid>
+        <Label x:Name="label" Content="Введите данные" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.637,2.066" FontWeight="Bold" FontSize="14" FontFamily="Segoe UI Semibold"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="165,283,0,0" VerticalAlignment="Top" Width="149" Height="23"/>
+        <PasswordBox x:Name="confirmPasswordBox" HorizontalAlignment="Left" Margin="165,321,0,0" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Left" Margin="165,202,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="24"/>
+        <TextBox x:Name="nameUserBox" HorizontalAlignment="Left" Margin="165,242,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="24"/>
+        <Button x:Name="buttonRegister" Content="Зарегистрироваться" HorizontalAlignment="Center" Margin="0,384,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,0.263" Width="148" Height="32" Click="buttonRegister_Click" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <Button x:Name="buttonBack" Content="🠔" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,0.263" Width="43" Height="32" FontFamily="Segoe UI" FontWeight="Bold" FontSize="20" Click="buttonBack_Click"/>
+        <Label x:Name="ErrorRegister" Content="" HorizontalAlignment="Center" Margin="0,438,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.017" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Логин" HorizontalAlignment="Left" Margin="40,202,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Пароль" HorizontalAlignment="Left" Margin="40,282,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label4" Content="Повторите пароль" HorizontalAlignment="Left" Margin="41,320,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label3" Content="Имя пользователя" HorizontalAlignment="Left" Margin="40,242,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+    </Grid>
+</Page>

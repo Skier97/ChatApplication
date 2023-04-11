@@ -1,0 +1,19 @@
+﻿<Page x:Class="Chat.WPF.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Chat.WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="400"
+      Title="LoginPage">
+
+    <Grid>
+        <Label x:Name="label" Content="Введите логин и пароль" HorizontalAlignment="Center" Margin="0,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.637,2.066" FontWeight="Bold" FontSize="14" FontFamily="Segoe UI Semibold"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Margin="0,280,0,0" VerticalAlignment="Top" Width="149" Height="23"/>
+        <TextBox x:Name="loginBox" HorizontalAlignment="Center" Margin="0,234,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="24"/>
+        <Button x:Name="buttonLogin" Content="Войти" HorizontalAlignment="Center" Margin="0,326,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,0.263" Width="148" Height="32" Click="buttonLogin_Click" FontFamily="Segoe UI" FontWeight="Bold"/>
+        <Label x:Name="ErrorLogin" Content="" HorizontalAlignment="Center" Margin="0,392,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.017" FontWeight="Bold"/>
+        <Button x:Name="buttonRegister" Content="Регистрация" HorizontalAlignment="Left" Margin="262,462,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,0.263" Width="108" Height="26" Click="buttonRegister_Click" FontFamily="Segoe UI" FontWeight="Bold"/>
+    </Grid>
+</Page>
