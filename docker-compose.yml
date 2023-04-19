@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  chat.webapi:
+    image: ${DOCKER_REGISTRY-}chatwebapi
+    build:
+      context: .
+      dockerfile: Chat.WebAPI/Dockerfile
+    ports:
+    - "5000:80"
+  sqldb:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_db
+    environment:
+        SA_PASSWORD: "t8E3UIqsDwX"
+        ACCEPT_EULA: "Y"
+    ports:
+    - "1440:1433"
