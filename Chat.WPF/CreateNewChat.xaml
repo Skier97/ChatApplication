@@ -19,5 +19,6 @@
                 </DataTemplate>
             </ListBox.Resources>
         </ListBox>
+        <Button x:Name="buttonBack" Content="Назад" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Height="32" Width="52" Click="buttonBack_Click"/>
     </Grid>
 </Page>

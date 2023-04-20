@@ -34,5 +34,10 @@ namespace Chat.WPF
             var item = listBoxUsers.SelectedItem;
             NavigationService.Navigate(new ViewDialog(_app, item));
         }
+
+        private void buttonBack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new GetChatsUser(_app));
+        }
     }
 }
