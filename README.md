@@ -46,4 +46,6 @@
 <b>Важные ссылки по Docker:</b><br>
 <p><a href="https://code-maze.com/mysql-aspnetcore-docker-compose/">Заполнение Docker Compose</a></p>
 <p><a href="https://www.section.io/engineering-education/dockerizing-an-aspnet-core-web-api-app-and-sql-server/">Взаимодействие WebAPI и SQL в Docker Compose</a></p>
-<b>Ключевые слова:</b> .NET Core, async/await, Swagger, WPF, CQRS, Docker, SQL Server, Logger, C#, sql 
+<b>Ключевые слова:</b> .NET Core, async/await, Swagger, WPF, CQRS, Docker, SQL Server, Logger, C#, sql <br><br>
+<h3>DEMO</h3><br>
+<img src="https://github.com/Skier97/ChatApplication/blob/master/DEMO.gif"/>
